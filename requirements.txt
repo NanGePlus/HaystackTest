@@ -1,0 +1,7 @@
+haystack-ai==2.8.0
+chroma-haystack==1.0.0
+python-dotenv==1.0.1
+pdfminer.six
+nltk==3.9.1
+
+

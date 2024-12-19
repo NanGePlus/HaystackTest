@@ -6,7 +6,22 @@
 在线步骤:获取用户问题->用户问题向量化->检索向量数据库->将检索结果和用户问题填入prompt模版->用最终的prompt调用LLM->由LLM生成回复                     
 **关于RAG相关项目地址:**                                  
 https://github.com/NanGePlus/RagLangChainTest                  
-## 1.1 RAG定义及技术方案架构
+
+## 1.1 Haystack
+### (1)Haystack定义   
+Haystack 是一个开源框架，用于构建强大的问答（Question Answering, QA）、RAG等 AI 应用                       
+它由 deepset 开发，旨在帮助开发者快速搭建基于自然语言处理（NLP）的信息查询和文档处理系统                       
+Haystack 支持构建从小型本地化应用到大规模生产级应用的多种场景                                                                            
+官方网址：https://haystack.deepset.ai/                                          
+Github地址:https://github.com/deepset-ai/haystack             
+### (2)向量数据库类型
+向量库、纯向量数据库、支持向量的SQL数据库、支持向量的NoSQL数据库、全文搜索数据库                
+<img src="./02.png" alt="" width="600" />                
+### (3)流水线编排 Pipeline
+pipeline是由不同组件集成的有向多图。定义数据流转的逻辑。支持复杂的多组件流程，如同时使用检索器和生成器                             
+<img src="./03.png" alt="" width="600" />
+
+## 1.2 RAG定义及技术方案架构
 ### (1)RAG定义
 RAG:Retrieval Augmented Generation(检索增强生成):通过使用检索的方法来增强生成模型的能力       
 核心思想:人找知识，会查资料；LLM找知识，会查向量数据库        
@@ -18,21 +33,7 @@ RAG:Retrieval Augmented Generation(检索增强生成):通过使用检索的方�
 ### (3)几个关键概念：
 向量数据库的意义是快速的检索             
 向量数据库本身不生成向量，向量是由Embedding模型产生的             
-向量数据库与传统的关系型数据库是互补的，不是替代关系，在实际应用中根据实际需求经常同时使用               
-
-## 1.2 Haystack
-### (1)Haystack定义   
-Haystack 是一个开源框架，用于构建强大的问答（Question Answering, QA）、信息检索和生成式 AI 应用                       
-它由 deepset 开发，旨在帮助开发者快速搭建基于自然语言处理（NLP）的信息查询和文档处理系统                       
-Haystack 支持构建从小型本地化应用到大规模生产级应用的多种场景                                                                            
-官方网址：https://haystack.deepset.ai/                                          
-Github地址:https://github.com/deepset-ai/haystack             
-### (2)向量数据库类型
-向量库、纯向量数据库、支持向量的SQL数据库、支持向量的NoSQL数据库、全文搜索数据库                
-<img src="./02.png" alt="" width="600" />                
-### (3)流水线编排 Pipeline
-pipeline是由不同组件集成的有向多图。定义数据流转的逻辑。支持复杂的多组件流程，如同时使用检索器和生成器                             
-<img src="./03.png" alt="" width="600" />
+向量数据库与传统的关系型数据库是互补的，不是替代关系，在实际应用中根据实际需求经常同时使用         
 
 ## 1.3 Chroma
 向量数据库，专门为向量检索设计的中间件                      

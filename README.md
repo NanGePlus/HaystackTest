@@ -18,7 +18,7 @@ Github地址:https://github.com/deepset-ai/haystack
 向量库、纯向量数据库、支持向量的SQL数据库、支持向量的NoSQL数据库、全文搜索数据库                
 <img src="./02.png" alt="" width="600" />                
 ### (3)流水线编排 Pipeline
-pipeline是由不同组件集成的有向多图。定义数据流转的逻辑。支持复杂的多组件流程，如同时使用检索器和生成器                             
+pipeline是由不同组件集成的无环有向图。定义数据流转的逻辑。支持复杂的多组件流程，如同时使用检索器和生成器                             
 <img src="./03.png" alt="" width="600" />
 
 ## 1.2 RAG定义及技术方案架构

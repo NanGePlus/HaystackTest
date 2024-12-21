@@ -6,8 +6,8 @@
 **(1)离线步骤(构建索引):** 文档加载->文档切分->向量化->灌入向量数据库                                    
 **(2)在线步骤(检索增强生成):** 获取用户问题->用户问题向量化->检索向量数据库->将检索结果和用户问题填入prompt模版->用最终的prompt调用LLM->由LLM生成回复                            
 <img src="./01.png" alt="" width="600" />                              
-相关视频:                  
-
+相关视频:                   
+https://www.bilibili.com/video/BV1nXkxYQEVp/                   
 https://youtu.be/sI_vxzGeOUY                  
 
 ## 1.2 Haystack框架
